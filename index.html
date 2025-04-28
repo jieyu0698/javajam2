@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Survey</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .survey-container {
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"] {
+            width: calc(100% - 12px);
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .bordered-title {
+            border-top: 1px solid #ddd;
+            padding-top: 5px;
+            margin-bottom: 8px;
+        }
+        .bordered-title label {
+            display: block;
+            font-weight: bold;
+            margin-top: 0; /* 移除 label 默认的上外边距 */
+        }
+        .checkbox-group label,
+        .radio-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: normal;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        textarea {
+            width: calc(100% - 12px);
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+            resize: vertical;
+            height: 80px;
+        }
+        .button-group button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-group button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+        }
+        .button-group button[type="reset"] {
+            background-color: #f0f0f0;
+            color: #333;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="survey-container">
+        <h1>Music Survey</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group bordered-title">
+                <label>Select Your Favorite Types of Music:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="genre" value="pop"> Pop</label>
+                    <label><input type="checkbox" name="genre" value="classical"> Classical</label>
+                    <label><input type="checkbox" name="genre" value="rock"> Rock</label>
+                    <label><input type="checkbox" name="genre" value="folk"> Folk</label>
+                    <label><input type="checkbox" name="genre" value="rap"> Rap</label>
+                    <label><input type="checkbox" name="genre" value="other"> Other</label>
+                </div>
+            </div>
+
+            <div class="form-group bordered-title">
+                <label>Select How Often You Purchase Music CDs:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="purchase_frequency" value="weekly"> Weekly</label>
+                    <label><input type="radio" name="purchase_frequency" value="few_yearly" checked> A few CDs each year</label>
+                    <label><input type="radio" name="purchase_frequency" value="monthly"> Monthly</label>
+                    <label><input type="radio" name="purchase_frequency" value="never"> Never purchase</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="listen_location">Select the locations you listen to Music:</label>
+                <select id="listen_location" name="listen_location">
+                    <option value="at_home" selected>At home</option>
+                    <option value="in_car">In the car</option>
+                    <option value="anywhere_mp3">Anywhere (MP3 Player)</option>
+                    <option value="other_location">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="music_role">What role does music play in your life?</label>
+                <textarea id="music_role" name="music_role"></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
